@@ -54,7 +54,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shan
 #USER huadong
 #WORKDIR /home/huadong
 
-
+RUN echo 'root:huadong' |chpasswd
 # 添加测试用户huadong，密码huadong，并且将此用户添加到sudoers里
 RUN useradd -ms /bin/bash huadong
 RUN echo "huadong:huadong" | chpasswd
