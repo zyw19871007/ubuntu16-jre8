@@ -88,6 +88,9 @@ RUN ln -s  /usr/java/${JAVA_VERSION}/bin/java /usr/bin/java
 
 # 容器需要开放SSH 22端口
 EXPOSE 22
+EXPOSE 80
+EXPOSE 8080
+EXPOSE 8090
 
 # 执行supervisord来同时执行多个命令，使用 supervisord 的可执行路径启动服务。
 CMD ["/usr/bin/supervisord"]
